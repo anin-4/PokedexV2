@@ -1,6 +1,7 @@
 package com.example.pokedexv2.ui.theme
 
 import androidx.compose.material3.Typography
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -19,14 +20,16 @@ val Poppins = FontFamily(
 
 val Typography = Typography(
     titleLarge = TextStyle(
-        fontFamily = Poppins,
-        fontWeight = FontWeight.Bold,
-        fontSize = 32.sp
+        fontSize = 21.sp,
+        fontFamily = FontFamily(Font(R.font.poppins_bold)),
+        fontWeight = FontWeight(600),
+        color = Color(0xFF000000),
     ),
-    bodyMedium = TextStyle(
-        fontFamily = Poppins,
-        fontWeight = FontWeight.Normal,
-        fontSize = 18.sp
+    titleMedium = TextStyle(
+        fontSize = 14.sp,
+        fontFamily = FontFamily(Font(R.font.poppins_bold)),
+        fontWeight = FontWeight(600),
+        color = Color(0xFF333333),
     ),
     bodySmall = TextStyle(
         fontFamily = Poppins,
@@ -34,8 +37,10 @@ val Typography = Typography(
         fontSize = 14.sp
     ),
     labelMedium = TextStyle(
-        fontFamily = Poppins,
-        fontWeight = FontWeight.Light,
-        fontSize = 12.sp
-    )
+        fontSize = 11.sp,
+        fontFamily = FontFamily(Font(R.font.poppins_medium)),
+        fontWeight = FontWeight(500),
+        color = Color(0xFF000000),
+
+        )
 )
