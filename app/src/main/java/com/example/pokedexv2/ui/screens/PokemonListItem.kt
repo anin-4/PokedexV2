@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -25,6 +26,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
 import com.example.pokedexv2.R
 import com.example.pokedexv2.ui.theme.aquaAnimalBackground
 import com.example.pokedexv2.ui.theme.aquaBlue
@@ -76,11 +78,10 @@ fun PokeDexItemCardBottomHighLightText() {
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
-            .width(66.dp)
-            .height(26.dp)
+            .height(30.dp)
             .clip(RoundedCornerShape(MaterialTheme.borderRadius.extraExtraLarge))
             .background(color = aquaBlue)
-            .padding(6.dp)
+            .padding(horizontal = 10.dp, vertical = 6.dp)
     ){
         Box(
             contentAlignment = Alignment.Center,
@@ -119,11 +120,11 @@ fun PokeDexItemCardRightComposable() {
             contentDescription = "",
             modifier = Modifier.size(94.dp)
         )
-        Image(
-            painter = painterResource(id = R.drawable.image_129),
-            contentDescription = "",
-            modifier = Modifier.size(100.dp)
-         )
+        AsyncImage(
+            model = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
+            contentDescription = null,
+            modifier = Modifier.size(150.dp)
+        )
 
     }
 }

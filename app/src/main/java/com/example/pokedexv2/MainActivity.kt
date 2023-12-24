@@ -3,7 +3,7 @@ package com.example.pokedexv2
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.example.pokedexv2.ui.screens.PokeDexItemCard
+import com.example.pokedexv2.ui.screens.PokemonDetailScreen
 import com.example.pokedexv2.ui.theme.PokedexV2Theme
 
 class MainActivity : ComponentActivity() {
@@ -11,7 +11,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             PokedexV2Theme {
-                PokeDexItemCard()
+                PokemonDetailScreen()
             }
         }
     }

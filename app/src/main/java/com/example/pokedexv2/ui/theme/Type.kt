@@ -11,24 +11,30 @@ import com.example.pokedexv2.R
 
 
 val Poppins = FontFamily(
-    Font(R.font.poppins_light),
-    Font(R.font.poppins_regular),
-    Font(R.font.poppins_medium),
-    Font(R.font.poppins_bold),
-    Font(R.font.poppins_extrabold)
+    Font(R.font.poppins_light, FontWeight.Light),
+    Font(R.font.poppins_regular, FontWeight.Normal),
+    Font(R.font.poppins_medium, FontWeight.Medium),
+    Font(R.font.poppins_bold, FontWeight.Bold),
+    Font(R.font.poppins_extrabold, FontWeight.ExtraBold)
  )
 
 val Typography = Typography(
+    headlineLarge = TextStyle(
+            fontSize = 32.sp,
+            fontFamily = Poppins,
+            fontWeight = FontWeight.SemiBold,
+            color = Color(0xFF000000)
+    ),
     titleLarge = TextStyle(
         fontSize = 21.sp,
-        fontFamily = FontFamily(Font(R.font.poppins_bold)),
+        fontFamily = Poppins,
         fontWeight = FontWeight(600),
         color = Color(0xFF000000),
     ),
     titleMedium = TextStyle(
         fontSize = 14.sp,
-        fontFamily = FontFamily(Font(R.font.poppins_bold)),
-        fontWeight = FontWeight(600),
+        fontFamily = Poppins,
+        fontWeight = FontWeight.Bold,
         color = Color(0xFF333333),
     ),
     bodySmall = TextStyle(
@@ -38,9 +44,8 @@ val Typography = Typography(
     ),
     labelMedium = TextStyle(
         fontSize = 11.sp,
-        fontFamily = FontFamily(Font(R.font.poppins_medium)),
+        fontFamily = Poppins,
         fontWeight = FontWeight(500),
-        color = Color(0xFF000000),
-
-        )
+        color = Color(0xFF000000)
+    )
 )
